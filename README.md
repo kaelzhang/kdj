@@ -15,7 +15,7 @@
 
 # kdj
 
-<!-- description -->
+FinTech utility method to calculate KDJ.
 
 ## Install
 
@@ -28,6 +28,12 @@ $ npm install kdj
 ```js
 import kdj from 'kdj'
 ```
+
+## kdj(close, low, high, )
+
+- **close** `Array.<Number>` array of closing prices.
+- **low** `Array.<Number>` array of low prices.
+- **high** `Array.<Number>` array of high prices.
 
 ## License
 
