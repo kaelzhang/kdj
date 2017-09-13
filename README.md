@@ -47,7 +47,7 @@ kdj(close, low, high, 9, 3, 3, 3, 2)
 
 ## kdj(close, low, high, periods, kPeriods, dPeriods, kTimes, dTimes)
 
-To understand the parameters better, we need to mathematically describe the tree lines. (via [wikipedia](https://en.wikipedia.org/wiki/Stochastic_oscillator))
+To understand the parameters better, we need to mathematically describe the calculation of K, D, J lines. (via [wikipedia](https://en.wikipedia.org/wiki/Stochastic_oscillator))
 
 ```
 %K = SMA( (closePrices - L) / (H - L), kPeriods )
