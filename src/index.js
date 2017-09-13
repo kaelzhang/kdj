@@ -23,24 +23,26 @@ export default (
   closePrices,
   lowPrices,
   highPrices,
-  r,
-  i,
-  a
+  periods = 9,
+  kPeriods = 3,
+  dPeriods = 3,
+  kTimes = 3,
+  dTimes = 2
 ) => {
 
-  const lowest = llv(lowPrices, r)
-  const highest = hhv(highPrices, r)
+  const lowest = llv(lowPrices, periods)
+  const highest = hhv(highPrices, periods)
 
   const u = div(
     mul(sub(closePrices, lowest), UPPER),
     sub(highest, lowest)
   )
 
-  const ks = sma(u, i)
-  const ds = sma(sk, a)
+  const ks = sma(u, kPeriods)
+  const ds = sma(sk, dPeriods)
   const js = sub(
-    mul(3, ks),
-    mul(2, ds)
+    mul(kTimes, ks),
+    mul(dTimes, ds)
   )
 
   return {

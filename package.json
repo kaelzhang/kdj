@@ -1,7 +1,7 @@
 {
   "name": "kdj",
   "version": "1.0.0",
-  "description": "kdj",
+  "description": "FinTech utility method to calculate the KDJ indicator.",
   "main": "lib/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -11,14 +11,18 @@
     "report-cov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [
-    "lib/"
+    "lib/",
+    "src/"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/kaelzhang/kdj.git"
   },
   "keywords": [
-    "kdj"
+    "kdj",
+    "fintech",
+    "indicator",
+    "stochastic oscillator"
   ],
   "engines": {
     "node": ">=4"
