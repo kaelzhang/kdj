@@ -31,6 +31,18 @@ $ npm install kdj
 
 ```js
 import kdj from 'kdj'
+
+kdj(close, low, high)
+
+// is equivalent to
+kdj(close, low, high, 9, 3, 3, 3, 2)
+
+// which returns:
+// {
+//   K: <Array>,
+//   D: <Array>,
+//   J: <Array>
+// }
 ```
 
 ## kdj(close, low, high, periods, kPeriods, dPeriods, kTimes, dTimes)
@@ -41,15 +53,15 @@ To understand the parameters better, we need to mathematically describe the tree
 %K = SMA( (closePrices - L) / (H - L), kPeriods )
 ```
 
-L is the lowest prices over the last `periods` periods.
+`L` is the lowest prices over the last `periods` periods.
 
-H is the highst prices over the last `periods` periods.
+`H` is the highst prices over the last `periods` periods.
 
 ```
 %D = SMA( %K, dPeriods )
 ```
 
-%D is the `dPeriods`-periods moving average of %K.
+`%D` is the `dPeriods`-periods moving average of `%K`.
 
 
 KDJ is calculated quite alike Stochastic indicator, but the difference is in having a J line, which Stochastic does not have.
@@ -62,7 +74,7 @@ KDJ is calculated quite alike Stochastic indicator, but the difference is in hav
 - **close** `Array.<Number>` array of closing prices.
 - **low** `Array.<Number>` array of low prices.
 - **high** `Array.<Number>` array of high prices.
-- **periods** `Number=9` the size of time periods to get the highest / lowest prices. Defaults to `3`.
+- **periods** `Number=9` the size of time periods to get the highest / lowest prices. Defaults to `9`.
 - **kPeriods** `Number=3` the time periods to calculate the moving average for %K. Defaults to `3`.
 - **dPeriods** `Number=3` the time periods to calculate the moving average for %D. Defaults to `3`.
 - **kTimes** `Number=3`

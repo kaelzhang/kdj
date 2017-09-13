@@ -34,15 +34,16 @@ export default (
   const highest = hhv(highPrices, periods)
 
   const u = div(
-    mul(sub(closePrices, lowest), UPPER),
-    sub(highest, lowest)
+    mul(sub(closePrices, lowest, 1), UPPER, 1),
+    sub(highest, lowest, 1)
   )
 
   const ks = sma(u, kPeriods)
-  const ds = sma(sk, dPeriods)
+  const ds = sma(ks, dPeriods)
   const js = sub(
-    mul(kTimes, ks),
-    mul(dTimes, ds)
+    mul(kTimes, ks, 1),
+    mul(dTimes, ds, 1),
+    1
   )
 
   return {
