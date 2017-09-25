@@ -1,6 +1,6 @@
 {
   "name": "kdj",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "FinTech utility method to calculate the KDJ indicator.",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "hhv-llv": "^1.0.0",
-    "math-array": "^1.1.1",
+    "math-array": "^1.1.2",
     "moving-averages": "^4.0.5"
   }
 }
