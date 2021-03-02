@@ -13,6 +13,14 @@
 [![Dependency Status](https://david-dm.org/kaelzhang/kdj.svg)](https://david-dm.org/kaelzhang/kdj)
 -->
 
+# WARNING
+
+This module is lack of maintainance.
+
+If you are familiar with python programming maybe you could check [**stock-pandas**](https://github.com/kaelzhang/stock-pandas) which provides powerful statistic indicators support, and is backed by [`numpy`](https://numpy.org/) and [`pandas`](https://pandas.pydata.org/). Its performance is many times higher than JavaScript libraries, and can be directly used by machine learning programs.
+
+****
+
 # kdj
 
 FinTech utility method to calculate the KDJ indicator.
